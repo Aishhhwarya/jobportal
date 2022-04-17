@@ -9,7 +9,7 @@ import { TokenStorageService } from 'src/app/_services/token-storage.service';
   styleUrls: ['./my-jobs.component.css'],
 })
 export class MyJobsComponent implements OnInit {
-  jobSeekerEmail = this.tokenStorage.getUser().email; 
+  jobSeekerEmail = this.tokenStorage.getUser().email;
   myJobs : any;
   constructor(
     private employerService: EmployerService,

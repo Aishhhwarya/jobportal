@@ -74,7 +74,7 @@ export class VacancyRequestItemComponent implements OnInit {
             this.toastr.error('Failed to reject the application!!');
           },
         });
-    
+
   }
 
   closeResult = '';
@@ -127,5 +127,5 @@ export class VacancyRequestItemComponent implements OnInit {
       );
   }
 
-  
+
 }

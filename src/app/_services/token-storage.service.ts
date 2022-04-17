@@ -39,7 +39,7 @@ export class TokenStorageService {
     window.localStorage.removeItem(JSK_KEY);
     window.localStorage.setItem(JSK_KEY, JSON.stringify(data));
   }
-  
+
   public saveVacReq(data: any): void {
     window.localStorage.removeItem(VACREQ_KEY);
     window.localStorage.setItem(VACREQ_KEY, JSON.stringify(data));
@@ -71,7 +71,7 @@ export class TokenStorageService {
 
     return {};
   }
- 
+
 
   public getVacReq(): any {
     const vacReqData = window.localStorage.getItem(VACREQ_KEY);
@@ -81,9 +81,9 @@ export class TokenStorageService {
 
     return {};
   }
-  
+
   public removeToken(): void {
     window.localStorage.removeItem(TOKEN_KEY);
   }
- 
+
 }

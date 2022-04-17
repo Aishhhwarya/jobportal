@@ -1,6 +1,6 @@
 export class EmployerDetail {
     employerId!: number
-    organizationName!: string 
+    organizationName!: string
     orgnizationType!: string
     companyEmail!: string
     companyPhone!: string

@@ -22,7 +22,7 @@ export class JobseekerService {
 
   constructor(private http: HttpClient) { }
 
- 
+
   createNewJobSeekerProfile(jobSeekerDetail :JobSeekerDetail): Observable<any> {
     return this.http.post(JSK_API,jobSeekerDetail,httpOptions);
   }
@@ -34,7 +34,7 @@ export class JobseekerService {
   getJobSeekerByEmail(email: any): Observable<any> {
     return this.http.get(JSK_API + `/getByEmail/${email}`,httpOptions);
   }
-  
+
   deleteJobSeekerById(id: any): Observable<any> {
     return this.http.delete(JSK_API + `/${id}`,httpOptions);
   }
@@ -60,7 +60,7 @@ export class JobseekerService {
   getQualificationByEmail(email: any): Observable<any> {
     return this.http.get(QUA_API + `/getByEmail/${email}`,httpOptions);
   }
-  
+
   deleteQualificationById(id: any): Observable<any> {
     return this.http.delete(QUA_API + `/${id}`,httpOptions);
   }
@@ -69,10 +69,10 @@ export class JobseekerService {
     return this.http.put(QUA_API + `/${id}`, qualification,httpOptions);
   }
 
-  
+
 
   //Experience
-  
+
   getAllExperiences(): Observable<any> {
     return this.http.get(EXP_API,httpOptions);
   }
@@ -88,7 +88,7 @@ export class JobseekerService {
   getExperienceByEmail(email: any): Observable<any> {
     return this.http.get(EXP_API + `/getByEmail/${email}`,httpOptions);
   }
-  
+
   deleteExperienceById(id: any): Observable<any> {
     return this.http.delete(EXP_API + `/${id}`,httpOptions);
   }

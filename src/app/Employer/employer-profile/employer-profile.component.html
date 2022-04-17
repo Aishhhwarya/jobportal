@@ -1,7 +1,7 @@
 <div *ngIf="update; then ifBlock else elseBlock"></div>
 
 <ng-template #ifBlock>
-  
+
 <div class="container container col-md-11">
   <h4 class="d-flex">Update Profile</h4>
         <form
@@ -11,7 +11,7 @@
         novalidate
         class="mt-4 card bg-secondary p-3"
       >
-  
+
       <!-- organizationName -->
       <div class="row">
         <div class="form-group col-md-6">
@@ -33,7 +33,7 @@
               Username must be at least 3 characters
             </div>
             <div *ngIf="organizationName.errors['pattern']">
-                Name Should only contain aplhabets 
+                Name Should only contain aplhabets
             </div>
           </div>
         </div>
@@ -42,9 +42,9 @@
         <div class="form-group col-md-6">
             <label for="orgnizationType">Orgnization Type</label>
             <span><label class="text-danger"> *</label></span>
-            <input 
-                type="text" 
-                class="form-control" 
+            <input
+                type="text"
+                class="form-control"
                 name="orgnizationType"
                 [(ngModel)]="empData[0].orgnizationType"
                 required
@@ -58,7 +58,7 @@
                   Name must be at least 3 characters
                 </div>
                 <div *ngIf="orgnizationType.errors['pattern']">
-                  Name Should only contain aplhabets 
+                  Name Should only contain aplhabets
                 </div>
               </div>
         </div>
@@ -86,7 +86,7 @@
           </div>
         </div>
 
-        
+
         <!-- Contact Number -->
         <div class="form-group col-md-6">
           <label for="companyPhone ">Company Phone</label>
@@ -129,7 +129,7 @@
             Please Enter Valid Year!
           </div>
         </div>
-     
+
 
       </div>
 
@@ -155,15 +155,15 @@
         </div>
       </div>
     </div>
-      
+
 
         <!-- About -->
         <div class="form-group mt-3">
             <label for="about">About</label>
             <span><label class="text-danger"> *</label></span>
-            <textarea 
-                type="textbox" 
-                class="form-control" 
+            <textarea
+                type="textbox"
+                class="form-control"
                 name="about"
                 [(ngModel)]="empData[0].about"
                 required
@@ -189,7 +189,7 @@
             email
             #createdBy="ngModel"
             readonly
-          />       
+          />
         </div>
 
          <div class="form-group mt-3">
@@ -197,15 +197,15 @@
                 <span class="mr-1"></span>
                 Update Profile
             </button>
-        
+
           </div>
-       
+
       </form>
     </div>
 </ng-template>
 
 <ng-template #elseBlock>
-  
+
   <div class="container container col-md-12">
     <h2 class="d-flex ">Create Profile</h2>
           <form
@@ -215,7 +215,7 @@
           novalidate
           class="mt-4 card bg-secondary p-3"
         >
-    
+
         <!-- organizationName -->
         <div class="row">
           <div class="form-group col-md-6">
@@ -237,18 +237,18 @@
                 Username must be at least 3 characters
               </div>
               <div *ngIf="organizationName.errors['pattern']">
-                  Name Should only contain aplhabets 
+                  Name Should only contain aplhabets
               </div>
             </div>
           </div>
-  
+
           <!-- orgnizationType -->
           <div class="form-group col-md-6">
               <label for="orgnizationType">Orgnization Type</label>
               <span><label class="text-danger"> *</label></span>
-              <input 
-                  type="text" 
-                  class="form-control" 
+              <input
+                  type="text"
+                  class="form-control"
                   name="orgnizationType"
                   [(ngModel)]="form.orgnizationType"
                   required
@@ -262,12 +262,12 @@
                     Name must be at least 3 characters
                   </div>
                   <div *ngIf="orgnizationType.errors['pattern']">
-                    Name Should only contain aplhabets 
+                    Name Should only contain aplhabets
                   </div>
                 </div>
           </div>
         </div>
-  
+
         <div class="row mt-3">
           <!-- email -->
           <div class="form-group col-md-6">
@@ -289,8 +289,8 @@
               </div>
             </div>
           </div>
-  
-          
+
+
           <!-- Contact Number -->
           <div class="form-group col-md-6">
             <label for="companyPhone ">Company Phone</label>
@@ -312,7 +312,7 @@
             </div>
           </div>
         </div>
-  
+
         <div class="row mt-3">
          <!-- startYear -->
          <div class="form-group col-md-6">
@@ -333,10 +333,10 @@
               Please Enter Valid Year!
             </div>
           </div>
-       
-  
+
+
         </div>
-  
+
          <!-- noOfEmployees -->
          <div class="form-group col-md-6">
           <label for="noOfEmployees">No. of Employees</label>
@@ -359,15 +359,15 @@
           </div>
         </div>
       </div>
-        
-  
+
+
           <!-- About -->
           <div class="form-group mt-3">
               <label for="about">About</label>
               <span><label class="text-danger"> *</label></span>
-              <textarea 
-                  type="textbox" 
-                  class="form-control" 
+              <textarea
+                  type="textbox"
+                  class="form-control"
                   name="about"
                   [(ngModel)]="form.about"
                   required
@@ -381,7 +381,7 @@
                   </div>
               </div>
           </div>
-  
+
           <!-- email -->
           <div class="form-group">
             <input
@@ -393,17 +393,17 @@
               email
               #createdBy="ngModel"
               readonly
-            />       
+            />
             </div>
-    
-  
+
+
            <div class="form-group mt-3">
               <button class="btn btn-primary" [disabled]="f.invalid">
                   <span class="mr-1"></span>
                   Create Profile
               </button>
           </div>
-  
+
         </form>
       </div>
 </ng-template>

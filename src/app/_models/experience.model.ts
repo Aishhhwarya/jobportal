@@ -1,4 +1,4 @@
-export class Experience {   
+export class Experience {
   companyName!: string
   startDate!: string
   endDate!: string

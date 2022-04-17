@@ -56,7 +56,7 @@ export class ProfileDetailFormComponent implements OnInit {
   }
 
   saveProfile(data: any): void {
-    
+
     if(this.update){
         this.jobseekerService.updateJobSeeker(this.userEmail ,data).subscribe({
           next: (res) => {
@@ -67,17 +67,17 @@ export class ProfileDetailFormComponent implements OnInit {
             this.toastr.error('Failed to update profile!', 'Job-Portal');
           },
         });
-      
+
     }
     else{
       this.jobseekerService.createNewJobSeekerProfile(data).subscribe({
         next: (response) => {
-          this.toastr.success('Profile created successfully..', 'Job-Portal');         
+          this.toastr.success('Profile created successfully..', 'Job-Portal');
         },
         error: (err) => {
           this.toastr.error('Failed to create profile!', 'Job-Portal');
         },
       });
-    }   
+    }
   }
 }

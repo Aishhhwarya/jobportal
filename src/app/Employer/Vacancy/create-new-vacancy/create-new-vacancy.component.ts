@@ -49,12 +49,12 @@ export class CreateNewVacancyComponent implements OnInit {
   onSubmit(data: any): void {
     if (data.minSalary >= data.maxSalary) {
       this.toastr.warning('Min Salary Must be less than Max Salary!!', 'Job-Portal');
-      
+
     } else {
       this.employerService.createNewVacancy(data).subscribe({
         next: (response) => {
           this.toastr.success('Job created successfully', 'Job-Portal');
-         
+
         },
         error: (err) => {
           this.toastr.error('Failed to create job!', 'Job-Portal');

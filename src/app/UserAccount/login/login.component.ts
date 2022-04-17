@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
         })
         this.isLoginFailed = false;
         this.isLoggedIn = true;
-    
+
 
         if (this.role == 'employer') {
           this.router.navigate(['employer']);
@@ -64,13 +64,13 @@ export class LoginComponent implements OnInit {
         else if (this.role == 'jobseeker') {
           this.router.navigate(['jobseeker']);
         }
-        
+
       },
       error: (err) => {
         this.toastr.error('Login Failed! Username or Password is not valid!', 'Job-Portal');
-       
+
       },
     });
   }
-  
+
 }

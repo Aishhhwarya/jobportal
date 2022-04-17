@@ -1,17 +1,16 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/Forms';
+import { FormsModule } from '@angular/Forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './Components/navbar/navbar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomepageComponent } from './Home/homepage/homepage.component';
 import { LoginComponent } from './UserAccount/login/login.component';
 import { RegisterComponent } from './UserAccount/register/register.component';
 import { authInterceptorProviders } from './_interceptor/auth.interceptor';
 import { ChangePasswordComponent } from './UserAccount/change-password/change-password.component';
-import { NotFoundPageComponent } from './not-found-page/not-found-page.component';
 import { JobSeekerComponent } from './JobSeeker/job-seeker/job-seeker.component';
 import { EmployerComponent } from './Employer/employer/employer.component';
 import { EmployerProfileComponent } from './Employer/employer-profile/employer-profile.component';
@@ -24,9 +23,6 @@ import { SearchJobsComponent } from './JobSeeker/SearchJobs/search-jobs/search-j
 import { QualificationFormComponent } from './JobSeeker/Qualifications/qualification-form/qualification-form.component';
 import { QualificationItemComponent } from './JobSeeker/Qualifications/qualification-item/qualification-item.component';
 import { QualificationListComponent } from './JobSeeker/Qualifications/qualification-list/qualification-list.component';
-import { ExperienceFormComponent } from './JobSeeker/Experience/experience-form/experience-form.component';
-import { ExperienceItemComponent } from './JobSeeker/Experience/experience-item/experience-item.component';
-import { ExperienceListComponent } from './JobSeeker/Experience/experience-list/experience-list.component';
 import { ProfileDetailFormComponent } from './JobSeeker/Profile/profile-detail-form/profile-detail-form.component';
 import { SearchJobItemComponent } from './JobSeeker/SearchJobs/search-job-item/search-job-item.component';
 import { VacancyRequestItemComponent } from './Employer/VacanyRequest/vacancy-request-item/vacancy-request-item.component';
@@ -45,12 +41,10 @@ import { ConfirmationModalComponent } from './ProfileModals/confirmation-modal/c
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     HomepageComponent,
     LoginComponent,
     RegisterComponent,
     ChangePasswordComponent,
-    NotFoundPageComponent,
     JobSeekerComponent,
     EmployerComponent,
     EmployerProfileComponent,
@@ -63,9 +57,6 @@ import { ConfirmationModalComponent } from './ProfileModals/confirmation-modal/c
     QualificationFormComponent,
     QualificationItemComponent,
     QualificationListComponent,
-    ExperienceFormComponent,
-    ExperienceItemComponent,
-    ExperienceListComponent,
     ProfileDetailFormComponent,
     SearchJobItemComponent,
     VacancyRequestItemComponent,
@@ -88,6 +79,7 @@ import { ConfirmationModalComponent } from './ProfileModals/confirmation-modal/c
     ToastrModule.forRoot(),
     BrowserAnimationsModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })

@@ -49,10 +49,10 @@ export class RegisterComponent implements OnInit {
             'Your account registered successfully!!',
             'Job-Portal'
           );
-          this.isSignUpFailed = false;
-          this.router.navigate(['login']);
+           this.isSignUpFailed = false;
+           this.router.navigate(['login']);
         },
-        error: (err) => {
+         error: (err) => {
           this.toastr.error('Failed to register your account!!', 'Job-Portal');
         },
       });

@@ -29,14 +29,14 @@ export class EmployerProfileComponent implements OnInit {
   };
 
   empData: any = '';
-  
+
 
   constructor(
     private employerService: EmployerService,
     private tokenStorage: TokenStorageService,
     private router: Router,
     private toastr: ToastrService
-  ) 
+  )
   {}
 
   ngOnInit(): void {
@@ -57,7 +57,7 @@ export class EmployerProfileComponent implements OnInit {
 
 
  createProfile(data: any): void {
-   
+
     this.employerService.createNewEmployer(data).subscribe({
       next: (response) => {
         this.toastr.success('Profile created successfully..', 'Job-Portal');
